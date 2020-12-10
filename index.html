@@ -4,17 +4,28 @@
 <head>
     <title> Final Exam </title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Welcome to our gallery</h1>
+    <header>
+        <h1>Welcome to our gallery</h1>
+    </header>
     <p>Hover on any thumbnail to see it bigger</p>
-    <div id="thumb-bar"> </div>
-    <img class="displayed-img">
-    <label>What effect do you want to apply?</label>
-    <input id="effect" type="text">
-    <button>Submit</button>
+    <div class="content">
+        <div class= "images" id="thumb-bar"> </div>
+        <img class="displayed-img" id ="focused-image" alt="Image Being Hovered on">
+    </div>
+    <footer>
+        <div class="footerc" id="footerid">
+            <label id="label-effect">What effect do you want to apply?</label>
+            <input id="effect" type="text">
+            <button id="submit-button">Submit</button>
+        </div>
+    </footer>
+    <script src="js/final.js"> </script>
 </body>
 
 </html>
