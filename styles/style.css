@@ -3,13 +3,10 @@ body {
     font-family: 'Montserrat', regular;
     /* width: 80vw; */
 }
-h1 {
-    display: flex;
-    font-size: 35px;
+header {
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
 
 }
 
@@ -68,6 +65,10 @@ div img {
         justify-content: space-around;
         padding-bottom: 5%;
     
+    }
+    .content {
+        width: 640px;
+        margin: auto;
     }
 
     #label-effect {

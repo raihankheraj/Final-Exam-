@@ -27,7 +27,7 @@ function handleEffectInput (e) {
     
     if(textInput.value === "blur") {
         console.log("success");
-        changePic();
+        changePic(e);
         textInput.value = "";
     }else {
         alert("Invalid effect");
@@ -37,21 +37,33 @@ function handleEffectInput (e) {
 }
 
 
-function changePic () {
-    // Change the src of focsued image to the blurry version
+function changePic (e) {
+    // Change the src of focused image to the blurry version
 
+        var listSrc = [];
+        let imgArray = document.querySelectorAll(".gallery");
+        for (var i = 0; i < imgArray.length; i++){
+            listSrc.push(imgArray[i].src);
+        }
 
-        let focusedImg = document.getElementById("focused-image");
-        let originalSrc = focusedImg.getAttribute("src");
-        let ogSrcFirstPart = originalSrc.slice(0, 139);
-        let ogSrcSecondPart = originalSrc.slice(139);
-        console.log(originalSrc);
-        focusedImg.setAttribute("src", ogSrcFirstPart + "B" + ogSrcSecondPart);
+        var focusedImg = document.querySelector(".displayed-img");
 
-       
+        if(focusedImg.src == listSrc[0]){
+            focusedImg.src = "images/pic1B.jpg";
 
-        
-    
+        }if(focusedImg.src == listSrc[1]){
+            focusedImg.src = "images/pic2B.jpg";
+
+        }if(focusedImg.src == listSrc[2]){
+            focusedImg.src = "images/pic3B.jpg";
+
+        }if(focusedImg.src == listSrc[3]){
+            focusedImg.src = "images/pic4B.jpg";
+
+        }if(focusedImg.src == listSrc[4]){
+            focusedImg.src = "images/pic5B.jpg";
+        }
+
 }
 
 
